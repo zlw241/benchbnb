@@ -10,7 +10,14 @@ const Root = ({ store }) => {
 
   function _redirectIfLoggedIn(nextState, replace) {
     if (store.getState().session.currentUser) {
-      replace('/')
+      replace('/');
+    }
+  }
+
+  function _ensureLoggedIn(nextState, replace) {
+    console.log(store.getState().session.currentUser);
+    if (store.getState().session.currentUser) {
+      replace('/login');
     }
   }
 

@@ -37,6 +37,8 @@ class SessionForm extends React.Component {
   render() {
     return (
       <div>
+        <p>{this.props.errors.error}</p>
+
         <label>Username
         <input type="text" name="username" onInput={this.handleInput} value={this.state.username} />
         </label><br />

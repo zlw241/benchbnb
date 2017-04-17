@@ -14,8 +14,10 @@ const SessionReducer = (state = default_state, action) => {
       return newState;
     }
     case RECEIVE_ERRORS: {
+      debugger
       const newState = Object.assign({}, default_state);
       newState.errors = action.errors;
+
       return newState;
     }
     default:

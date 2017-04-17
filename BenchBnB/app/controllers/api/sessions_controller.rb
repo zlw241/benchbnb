@@ -11,8 +11,8 @@ class Api::SessionsController < ApplicationController
     else
       render json: {
         error: "invalid credentials",
-        status: 422
-      }
+      },
+      status: 401
 
     end
   end
