@@ -30,4 +30,5 @@ export const logout = () => (dispatch) => {
   );
 };
 
-window.login = login
+window.login = login;
+window.signup = signup;

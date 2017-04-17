@@ -1,1 +1,9 @@
 <main id="root"></main>
+<!-- JS script is valid HTML -->
+<script type="text/javascript">
+// logged_in? and current_user are coming from our ApplicationController
+  <% if logged_in? %>
+    window.currentUser =
+      <%= render("api/users/user.json.jbuilder", user: current_user).html_safe %>
+  <% end %>
+</script>
